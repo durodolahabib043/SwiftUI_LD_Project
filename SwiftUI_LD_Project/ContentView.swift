@@ -8,14 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var contentViewModel = ContentViewModel()
+
+      private let adaptiveColumn = [
+          GridItem(.adaptive(minimum: 150))
+      ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+
+        ScrollView{
+              LazyVGrid(columns: adaptiveColumn, spacing: 20) {
+                  ForEach(contentViewModel.entry, id: \.id) { entry in
+                      
+                      VStack(alignment: .center) {
+                          AsyncImage(url: URL(string: entry.image)) { image in
+                           image.resizable()
+                                  .frame(height: 150)
+                          } placeholder: {
+                           ProgressView()
+                          }
+                          .frame(maxWidth: .infinity)
+                          Text(entry.name)
+                          Text(entry.code)
+                          Text(entry.price)
+                          Spacer()
+                      }
+                      .border(.gray)
+                      .frame(maxWidth: .infinity)
+
+                  }
+              }
+              
+          }
+          .padding()
+          .onAppear {
+              Task {
+                  await contentViewModel.fetchClientCart()
+              }
+          }
     }
 }
 
