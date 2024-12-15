@@ -14,6 +14,7 @@
 		4F8BEDA52D0E07C300D78895 /* ApiClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BEDA42D0E07C300D78895 /* ApiClientManager.swift */; };
 		4F8BEDA82D0E087200D78895 /* LoblawsProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BEDA72D0E087200D78895 /* LoblawsProduct.swift */; };
 		4F8BEDAB2D0E0CBD00D78895 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BEDAA2D0E0CBD00D78895 /* ContentViewModel.swift */; };
+		4F8BEDAE2D0E6CA600D78895 /* ContentViewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BEDAD2D0E6CA600D78895 /* ContentViewDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4F8BEDA42D0E07C300D78895 /* ApiClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientManager.swift; sourceTree = "<group>"; };
 		4F8BEDA72D0E087200D78895 /* LoblawsProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoblawsProduct.swift; sourceTree = "<group>"; };
 		4F8BEDAA2D0E0CBD00D78895 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		4F8BEDAD2D0E6CA600D78895 /* ContentViewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +59,9 @@
 		4F8BED942D0DDEB600D78895 /* SwiftUI_LD_Project */ = {
 			isa = PBXGroup;
 			children = (
+				4F8BEDAC2D0E6C8400D78895 /* Presentation */,
 				4F8BEDA92D0E0C9300D78895 /* DomainLayer */,
 				4F8BEDA32D0E07A800D78895 /* DataLayer */,
-				4F8BED952D0DDEB600D78895 /* SwiftUI_LD_ProjectApp.swift */,
-				4F8BED972D0DDEB600D78895 /* ContentView.swift */,
 				4F8BED992D0DDEB800D78895 /* Assets.xcassets */,
 				4F8BED9B2D0DDEB800D78895 /* Preview Content */,
 			);
@@ -98,6 +99,16 @@
 				4F8BEDAA2D0E0CBD00D78895 /* ContentViewModel.swift */,
 			);
 			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		4F8BEDAC2D0E6C8400D78895 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4F8BED952D0DDEB600D78895 /* SwiftUI_LD_ProjectApp.swift */,
+				4F8BED972D0DDEB600D78895 /* ContentView.swift */,
+				4F8BEDAD2D0E6CA600D78895 /* ContentViewDetails.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F8BEDA82D0E087200D78895 /* LoblawsProduct.swift in Sources */,
+				4F8BEDAE2D0E6CA600D78895 /* ContentViewDetails.swift in Sources */,
 				4F8BED982D0DDEB600D78895 /* ContentView.swift in Sources */,
 				4F8BED962D0DDEB600D78895 /* SwiftUI_LD_ProjectApp.swift in Sources */,
 				4F8BEDA52D0E07C300D78895 /* ApiClientManager.swift in Sources */,
